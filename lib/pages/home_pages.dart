@@ -39,8 +39,11 @@ class home_page extends StatelessWidget {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          const ListTile(
-                            leading: Icon(Icons.album),
+                          ListTile(
+                            leading: ClipRRect(
+                              child: Image.network(
+                                  'https://d36tnp772eyphs.cloudfront.net/blogs/1/2018/02/Taj-Mahal.jpg'),
+                            ),
                             title: Text('The Enchanted Nightingale'),
                             subtitle: Text(
                                 'Music by Julie Gable. Lyrics by Sidney Stein.'),
