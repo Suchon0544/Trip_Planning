@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 // ignore: camel_case_types
 class home_page extends StatelessWidget {
@@ -28,12 +28,31 @@ class home_page extends StatelessWidget {
           SingleChildScrollView(
             child: Container(
               margin: EdgeInsets.all(25),
-              child: Text(
-                'Trip Planner',
-                style: GoogleFonts.robotoMono(),
+              child: Column(
+                children: [
+                  Text(
+                    'Trip Planner',
+                    style: TextStyle(fontWeight: FontWeight.w900),
+                  ),
+                  Container(
+                    child: Card(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          const ListTile(
+                            leading: Icon(Icons.album),
+                            title: Text('The Enchanted Nightingale'),
+                            subtitle: Text(
+                                'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
