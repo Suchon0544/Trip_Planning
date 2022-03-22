@@ -29,13 +29,14 @@ class home_page extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(25),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Trip Planner',
                     style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
                     child: Card(
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -58,7 +59,36 @@ class home_page extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
+                  ),
+                  Text(
+                    'Highlight',
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Card(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          ListTile(
+                            leading: ClipRRect(
+                              child: Image.network(
+                                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                                height: 200,
+                              ),
+                            ),
+                            title: Text('The Enchanted Nightingale'),
+                            subtitle: Text(
+                                'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                            trailing: Icon(
+                              Icons.arrow_right,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
