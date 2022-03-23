@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 // ignore: camel_case_types
 class map_page extends StatelessWidget {
@@ -6,13 +7,7 @@ class map_page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
-        child: Image.network(
-          'https://vc2i.rweb-images.com/www.ost.co.th/images/catalog_images/1621314156.jpg',
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
+    return GoogleMap(
+        initialCameraPosition: CameraPosition(target: LatLng(2000.00, 300.00)));
   }
 }

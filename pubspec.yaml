@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.2.0
   google_fonts: ^2.3.0
+  flutter_map: ^0.14.0
+  google_maps_flutter: ^2.0.9
 
 dev_dependencies:
   flutter_test:
