@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_map/flutter_map.dart';
 
 // ignore: camel_case_types
 class map_page extends StatelessWidget {
@@ -7,7 +7,8 @@ class map_page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GoogleMap(
-        initialCameraPosition: CameraPosition(target: LatLng(2000.00, 300.00)));
+    return FlutterMap(
+      options: MapOptions(),
+    );
   }
 }
