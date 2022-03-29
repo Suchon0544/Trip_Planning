@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project101/pages/home_pages.dart';
 import 'package:project101/pages/map_page.dart';
+import 'package:project101/pages/trip_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -31,15 +32,10 @@ class Navigator_tap extends StatefulWidget {
 // ignore: camel_case_types
 class _Navigator_tapState extends State<Navigator_tap> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     home_page(),
     map_page(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    trip_page(),
   ];
 
   void _onItemTapped(int index) {

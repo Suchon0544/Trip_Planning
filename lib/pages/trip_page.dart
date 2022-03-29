@@ -1,23 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  static const String _title = 'Flutter Code Sample';
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: _title,
-      home: MyStatelessWidget(),
-    );
-  }
-}
-
-class MyStatelessWidget extends StatelessWidget {
-  const MyStatelessWidget({Key? key}) : super(key: key);
+// ignore: camel_case_types
+class trip_page extends StatelessWidget {
+  const trip_page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,25 +15,30 @@ class MyStatelessWidget extends StatelessWidget {
               constraints: BoxConstraints(
                 minHeight: viewportConstraints.maxHeight,
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    // A fixed-height child.
-                    color: const Color(0xffeeee00), // Yellow
-                    height: 120.0,
-                    alignment: Alignment.center,
-                    child: const Text('Fixed Height Content'),
+              child: Container(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Card(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ListTile(
+                        leading: ClipRRect(
+                          child: Image.network(
+                            'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                            height: 200,
+                          ),
+                        ),
+                        title: Text('The Enchanted Nightingale'),
+                        subtitle: Text(
+                            'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                        trailing: Icon(
+                          Icons.arrow_right,
+                          size: 30,
+                        ),
+                      ),
+                    ],
                   ),
-                  Container(
-                    // Another fixed-height child.
-                    color: const Color(0xff008000), // Green
-                    height: 120.0,
-                    alignment: Alignment.center,
-                    child: const Text('Fixed Height Content'),
-                  ),
-                ],
+                ),
               ),
             ),
           );
