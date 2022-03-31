@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project101/pages/edit_page.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 // ignore: camel_case_types
-class trip_page extends StatelessWidget {
-  const trip_page({Key? key}) : super(key: key);
+class edit_page extends StatelessWidget {
+  const edit_page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,39 +71,20 @@ class trip_page extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           ListTile(
-                              leading: ClipRRect(
-                                child: Image.network(
-                                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
-                                  height: 200,
-                                ),
+                            leading: ClipRRect(
+                              child: Image.network(
+                                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                                height: 200,
                               ),
-                              title: Text('The Enchanted Nightingale'),
-                              subtitle: Text(
-                                  'Music by Julie Gable. Lyrics by Sidney Stein.'),
-                              trailing: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  IconButton(
-                                    iconSize: 30,
-                                    icon: Icon(Icons.edit_sharp),
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const edit_page()),
-                                      );
-                                    },
-                                  ),
-                                  IconButton(
-                                    iconSize: 30,
-                                    icon: Icon(Icons.delete),
-                                    onPressed: () {},
-                                  ),
-                                ],
-                              )),
+                            ),
+                            title: Text('The Enchanted Nightingale'),
+                            subtitle: Text(
+                                'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                            trailing: Icon(
+                              Icons.arrow_right,
+                              size: 30,
+                            ),
+                          ),
                         ],
                       ),
                     ),
