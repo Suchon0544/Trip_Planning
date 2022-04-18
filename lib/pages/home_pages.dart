@@ -1,5 +1,8 @@
 import 'dart:math';
+//import 'dart:async'; // สำหรับจัดการข้อมูลแบบ async
+//import 'dart:convert'; // สำหรับจัดการข้อมูล JSON data
 
+//import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
